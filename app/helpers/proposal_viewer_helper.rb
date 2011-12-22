@@ -1,0 +1,2 @@
+module ProposalViewerHelper
+end

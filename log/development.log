@@ -1,0 +1,662 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateClients (20111128231720)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231720')[0m
+Migrating to CreateProposals (20111128231731)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "proposals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231731')[0m
+Migrating to CreateProposalSections (20111128231741)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "proposal_sections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231741')[0m
+Migrating to AddSampleData (20111128232157)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateClients (20111128231720)
+Migrating to CreateProposals (20111128231731)
+Migrating to CreateProposalSections (20111128231741)
+Migrating to AddSampleData (20111128232157)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProposalSections (20111128231741)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "proposal_sections"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128231741'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProposals (20111128231731)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "proposals"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128231731'[0m
+Migrating to CreateClients (20111128231720)
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "clients"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128231720'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateClients (20111128231720)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "company" varchar(255), "website" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231720')[0m
+Migrating to CreateProposals (20111128231731)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "proposals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_name" varchar(255), "send_date" date, "client_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231731')[0m
+Migrating to CreateProposalSections (20111128231741)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "proposal_sections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "proposal_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231741')[0m
+Migrating to AddSampleData (20111128232157)
+  [4;35;1mClient Create (0.3ms)[0m   [0mINSERT INTO "clients" ("name", "company", "created_at", "updated_at", "website") VALUES('Duke Pete', 'Earthlingworks Inc.', '2011-11-28 23:41:01', '2011-11-28 23:41:01', 'http://www.google.com/')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProposalSections (20111128231741)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "proposal_sections"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128231741'[0m
+Migrating to CreateProposals (20111128231731)
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "proposals"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128231731'[0m
+Migrating to CreateClients (20111128231720)
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "clients"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128231720'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateClients (20111128231720)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "company" varchar(255), "website" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231720')[0m
+Migrating to CreateProposals (20111128231731)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "proposals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_name" varchar(255), "send_date" date, "client_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231731')[0m
+Migrating to CreateProposalSections (20111128231741)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "proposal_sections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "proposal_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231741')[0m
+Migrating to AddSampleData (20111128232157)
+  [4;35;1mClient Create (0.3ms)[0m   [0mINSERT INTO "clients" ("name", "company", "created_at", "updated_at", "website") VALUES('Duke Pete', 'Earthlingworks Inc.', '2011-11-28 23:41:27', '2011-11-28 23:41:27', 'http://www.google.com/')[0m
+  [4;36;1mProposal Create (0.1ms)[0m   [0;1mINSERT INTO "proposals" ("name", "created_at", "updated_at", "client_id", "user_name", "send_date") VALUES('Website Redesign', '2011-11-28 23:41:27', '2011-11-28 23:41:27', 1, 'James Snoop', '2011-11-28 15:41:27')[0m
+  [4;35;1mProposalSection Create (0.1ms)[0m   [0mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('N', '2011-11-28 23:41:27', '2011-11-28 23:41:27', '1', 1)[0m
+  [4;36;1mProposalSection Create (0.1ms)[0m   [0;1mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('D', '2011-11-28 23:41:27', '2011-11-28 23:41:27', '1', 1)[0m
+  [4;35;1mProposalSection Create (0.1ms)[0m   [0mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('N', '2011-11-28 23:41:27', '2011-11-28 23:41:27', '2', 1)[0m
+  [4;36;1mProposalSection Create (0.1ms)[0m   [0;1mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('D', '2011-11-28 23:41:27', '2011-11-28 23:41:27', '2', 1)[0m
+  [4;35;1mProposalSection Create (0.1ms)[0m   [0mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('N', '2011-11-28 23:41:27', '2011-11-28 23:41:27', '3', 1)[0m
+  [4;36;1mProposalSection Create (0.1ms)[0m   [0;1mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('D', '2011-11-28 23:41:27', '2011-11-28 23:41:27', '3', 1)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111128232157')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("clients")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("proposal_sections")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("proposals")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddSampleData (20111128232157)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" [0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".client_id = 1) [0m
+  [4;35;1mProposalSection Load (0.2ms)[0m   [0mSELECT * FROM "proposal_sections" WHERE ("proposal_sections".proposal_id = 1) [0m
+  [4;36;1mProposalSection Destroy (0.3ms)[0m   [0;1mDELETE FROM "proposal_sections" WHERE "id" = 1[0m
+  [4;35;1mProposalSection Destroy (0.0ms)[0m   [0mDELETE FROM "proposal_sections" WHERE "id" = 2[0m
+  [4;36;1mProposalSection Destroy (0.0ms)[0m   [0;1mDELETE FROM "proposal_sections" WHERE "id" = 3[0m
+  [4;35;1mProposalSection Destroy (0.0ms)[0m   [0mDELETE FROM "proposal_sections" WHERE "id" = 4[0m
+  [4;36;1mProposalSection Destroy (0.0ms)[0m   [0;1mDELETE FROM "proposal_sections" WHERE "id" = 5[0m
+  [4;35;1mProposalSection Destroy (0.0ms)[0m   [0mDELETE FROM "proposal_sections" WHERE "id" = 6[0m
+  [4;36;1mProposal Destroy (0.1ms)[0m   [0;1mDELETE FROM "proposals" WHERE "id" = 1[0m
+  [4;35;1mClient Destroy (0.1ms)[0m   [0mDELETE FROM "clients" WHERE "id" = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128232157'[0m
+Migrating to CreateProposalSections (20111128231741)
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "proposal_sections"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128231741'[0m
+Migrating to CreateProposals (20111128231731)
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "proposals"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128231731'[0m
+Migrating to CreateClients (20111128231720)
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "clients"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128231720'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateClients (20111128231720)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "company" varchar(255), "website" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231720')[0m
+Migrating to CreateProposals (20111128231731)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "proposals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_name" varchar(255), "send_date" date, "client_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231731')[0m
+Migrating to CreateProposalSections (20111128231741)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "proposal_sections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "proposal_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231741')[0m
+Migrating to AddSampleData (20111128232157)
+  [4;35;1mClient Create (0.3ms)[0m   [0mINSERT INTO "clients" ("name", "company", "created_at", "updated_at", "website") VALUES('Duke Pete', 'Earthlingworks Inc.', '2011-11-28 23:42:32', '2011-11-28 23:42:32', 'http://www.google.com/')[0m
+  [4;36;1mProposal Create (0.1ms)[0m   [0;1mINSERT INTO "proposals" ("name", "created_at", "updated_at", "client_id", "user_name", "send_date") VALUES('Website Redesign', '2011-11-28 23:42:32', '2011-11-28 23:42:32', 1, 'James Snoop', '2011-11-28 15:42:32')[0m
+  [4;35;1mProposalSection Create (0.1ms)[0m   [0mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('N', '2011-11-28 23:42:32', '2011-11-28 23:42:32', '1', 1)[0m
+  [4;36;1mProposalSection Create (0.1ms)[0m   [0;1mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('D', '2011-11-28 23:42:32', '2011-11-28 23:42:32', '1', 1)[0m
+  [4;35;1mProposalSection Create (0.1ms)[0m   [0mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('N', '2011-11-28 23:42:32', '2011-11-28 23:42:32', '2', 1)[0m
+  [4;36;1mProposalSection Create (0.1ms)[0m   [0;1mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('D', '2011-11-28 23:42:32', '2011-11-28 23:42:32', '2', 1)[0m
+  [4;35;1mProposalSection Create (0.1ms)[0m   [0mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('N', '2011-11-28 23:42:32', '2011-11-28 23:42:32', '3', 1)[0m
+  [4;36;1mProposalSection Create (0.0ms)[0m   [0;1mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('D', '2011-11-28 23:42:32', '2011-11-28 23:42:32', '3', 1)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20111128232157')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("clients")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("proposal_sections")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("proposals")[0m
+
+
+Processing ProposalViewerController#index (for 127.0.0.1 at 2011-11-28 15:44:01) [GET]
+
+NoMethodError (undefined method `load_objects' for #<ProposalViewerController:0x1093cfdc0>):
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.7ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProposalViewerController#index (for 127.0.0.1 at 2011-11-28 15:44:13) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: show):
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalViewerController#1 (for 127.0.0.1 at 2011-11-28 15:44:18) [GET]
+
+ActionController::UnknownAction (No action responded to 1. Actions: show):
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-11-28 15:44:27) [GET]
+  Parameters: {"id"=>"1"}
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://localhost/proposal_viewer/show/1]
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-11-28 15:45:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+Completed in 11ms (View: 0, DB: 0) | 200 OK [http://localhost/proposal_viewer/show/1]
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-11-28 15:45:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/proposal_viewer/show/1]
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-11-28 15:46:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `proposal' for #<Class:0x109452838>):
+  app/controllers/proposal_viewer_controller.rb:5:in `show'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendered rescues/_trace (28.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-11-28 15:46:23) [GET]
+  Parameters: {"id"=>"1"}
+
+NameError (uninitialized constant ProposalViewerController::Clien):
+  app/controllers/proposal_viewer_controller.rb:5:in `show'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (91.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-11-28 15:46:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+
+NoMethodError (undefined method `proposal' for #<Client:0x1094044a8>):
+  app/controllers/proposal_viewer_controller.rb:5:in `show'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/ruben/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-11-28 15:46:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".client_id = 1) LIMIT 1[0m
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://localhost/proposal_viewer/show/1]
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-11-28 15:46:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mClient Load (0.1ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+  [4;36;1mProposal Load (0.2ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".client_id = 1) LIMIT 1[0m
+  [4;35;1mProposalSection Load (0.2ms)[0m   [0mSELECT * FROM "proposal_sections" WHERE ("proposal_sections".proposal_id = 1) [0m
+Completed in 14ms (View: 0, DB: 1) | 200 OK [http://localhost/proposal_viewer/show/1]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddSampleData (20111128232157)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" [0m
+  [4;36;1mProposal Load (0.1ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals".client_id = 1) [0m
+  [4;35;1mProposalSection Load (0.3ms)[0m   [0mSELECT * FROM "proposal_sections" WHERE ("proposal_sections".proposal_id = 1) [0m
+  [4;36;1mProposalSection Destroy (0.3ms)[0m   [0;1mDELETE FROM "proposal_sections" WHERE "id" = 1[0m
+  [4;35;1mProposalSection Destroy (0.0ms)[0m   [0mDELETE FROM "proposal_sections" WHERE "id" = 2[0m
+  [4;36;1mProposalSection Destroy (0.0ms)[0m   [0;1mDELETE FROM "proposal_sections" WHERE "id" = 3[0m
+  [4;35;1mProposalSection Destroy (0.0ms)[0m   [0mDELETE FROM "proposal_sections" WHERE "id" = 4[0m
+  [4;36;1mProposalSection Destroy (0.0ms)[0m   [0;1mDELETE FROM "proposal_sections" WHERE "id" = 5[0m
+  [4;35;1mProposalSection Destroy (0.0ms)[0m   [0mDELETE FROM "proposal_sections" WHERE "id" = 6[0m
+  [4;36;1mProposal Destroy (0.1ms)[0m   [0;1mDELETE FROM "proposals" WHERE "id" = 1[0m
+  [4;35;1mClient Destroy (0.1ms)[0m   [0mDELETE FROM "clients" WHERE "id" = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128232157'[0m
+Migrating to CreateProposalSections (20111128231741)
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "proposal_sections"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128231741'[0m
+Migrating to CreateProposals (20111128231731)
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "proposals"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128231731'[0m
+Migrating to CreateClients (20111128231720)
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "clients"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20111128231720'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateClients (20111128231720)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "company" varchar(255), "website" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231720')[0m
+Migrating to CreateProposals (20111128231731)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "proposals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_name" varchar(255), "send_date" date, "client_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231731')[0m
+Migrating to CreateProposalSections (20111128231741)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "proposal_sections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "proposal_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128231741')[0m
+Migrating to AddSampleData (20111128232157)
+  [4;35;1mClient Create (0.3ms)[0m   [0mINSERT INTO "clients" ("name", "company", "created_at", "updated_at", "website") VALUES('Duke Pete', 'Earthlingworks Inc.', '2011-11-28 23:48:13', '2011-11-28 23:48:13', 'http://www.google.com/')[0m
+  [4;36;1mProposal Create (0.1ms)[0m   [0;1mINSERT INTO "proposals" ("name", "created_at", "updated_at", "client_id", "user_name", "send_date") VALUES('Website Redesign', '2011-11-28 23:48:13', '2011-11-28 23:48:13', 1, 'James Snoop', '2011-11-28 15:48:13')[0m
+  [4;35;1mProposalSection Create (0.1ms)[0m   [0mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('Name 1', '2011-11-28 23:48:13', '2011-11-28 23:48:13', 'Description for #1', 1)[0m
+  [4;36;1mProposalSection Create (0.1ms)[0m   [0;1mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('Name 2', '2011-11-28 23:48:13', '2011-11-28 23:48:13', 'Description for #2', 1)[0m
+  [4;35;1mProposalSection Create (0.1ms)[0m   [0mINSERT INTO "proposal_sections" ("name", "created_at", "updated_at", "description", "proposal_id") VALUES('Name 3', '2011-11-28 23:48:13', '2011-11-28 23:48:13', 'Description for #3', 1)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111128232157')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("proposal_sections")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("proposals")[0m
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-11-28 15:48:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mClient Load (0.1ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+  [4;35;1mProposal Load (0.2ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals".client_id = 1) LIMIT 1[0m
+  [4;36;1mProposalSection Load (0.2ms)[0m   [0;1mSELECT * FROM "proposal_sections" WHERE ("proposal_sections".proposal_id = 1) [0m
+Completed in 66ms (View: 0, DB: 0) | 200 OK [http://localhost/proposal_viewer/show/1]
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-11-28 16:03:21) [GET]
+  Parameters: {"id"=>"1"}
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://localhost/proposal_viewer/show/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateClients (20111128231720)
+Migrating to CreateProposals (20111128231731)
+Migrating to CreateProposalSections (20111128231741)
+Migrating to AddSampleData (20111128232157)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("clients")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("proposal_sections")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("proposals")[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-12-22 14:59:31) [GET]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 31ms (View: 5, DB: 2) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-12-22 15:00:10) [GET]
+  Parameters: {"id"=>"1"}
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/proposal_viewer/show/1]
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-12-22 15:29:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProposal Load (2.9ms)[0m   [0;1mSELECT * FROM "proposals" [0m
+Completed in 43ms (View: 12, DB: 3) | 200 OK [http://localhost/proposal_viewer/show/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-12-22 15:29:15) [GET]
+
+ActionController::RoutingError (No route matches "/proposal_viewer/show/style/style.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-12-22 15:29:15) [GET]
+
+ActionController::RoutingError (No route matches "/proposal_viewer/show/images/logo-footer.png" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-12-22 15:30:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProposal Load (0.7ms)[0m   [0mSELECT * FROM "proposals" [0m
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://localhost/proposal_viewer/show/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-12-22 15:30:12) [GET]
+
+ActionController::RoutingError (No route matches "/proposal_viewer/show/style/style.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-12-22 15:30:12) [GET]
+
+ActionController::RoutingError (No route matches "/proposal_viewer/show/images/logo-footer.png" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mProposal Load (1.1ms)[0m   [0;1mSELECT * FROM "proposals" LIMIT 1[0m
+  [4;35;1mClient Load (0.4ms)[0m   [0mSELECT * FROM "clients" [0m
+  [4;36;1mProposal Load (0.4ms)[0m   [0;1mSELECT * FROM "proposals" LIMIT 1[0m
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-12-22 15:39:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1) [0m
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+Completed in 67ms (View: 2, DB: 1) | 200 OK [http://localhost/proposal_viewer/show/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-12-22 15:39:59) [GET]
+
+ActionController::RoutingError (No route matches "/proposal_viewer/show/style/style.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-12-22 15:39:59) [GET]
+
+ActionController::RoutingError (No route matches "/proposal_viewer/show/images/logo-footer.png" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-12-22 15:40:02) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProposal Load (0.3ms)[0m   [0;1mSELECT * FROM "proposals" WHERE ("proposals"."id" = 2) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Proposal with ID=2):
+  app/controllers/proposal_viewer_controller.rb:6:in `show'
+  <internal:prelude>:10:in `synchronize'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendered rescues/_trace (55.3ms)
+Rendered rescues/_request_and_response (5.5ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ProposalViewerController#show (for 127.0.0.1 at 2011-12-22 15:40:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProposal Load (0.4ms)[0m   [0mSELECT * FROM "proposals" WHERE ("proposals"."id" = 1) [0m
+  [4;36;1mClient Load (0.8ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 1) [0m
+Completed in 148ms (View: 2, DB: 1) | 200 OK [http://localhost/proposal_viewer/show/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-12-22 15:40:08) [GET]
+
+ActionController::RoutingError (No route matches "/proposal_viewer/show/style/style.css" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-12-22 15:40:08) [GET]
+
+ActionController::RoutingError (No route matches "/proposal_viewer/show/images/logo-footer.png" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/al/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
